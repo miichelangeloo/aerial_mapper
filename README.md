@@ -54,4 +54,21 @@ T. Hinzmann, J. L. Schönberger, M. Pollefeys, and R. Siegwart, **"Mapping on th
 ### Acknowledgment
 This work was partially funded by the European FP7 project SHERPA (FP7-600958) and the Federal office armasuisse Science and Technology under project number 050-45. Furthermore, the authors wish to thank [Lucas P. Teixeira](https://github.com/weblucas) from the [Vision for Robotics Lab](http://www.iris.ethz.ch/the-institute/vision-for-robotics-lab.html) at ETH Zurich for sharing scripts that bridge the gap between Blender and Gazebo.
 
+# Differenze di compilazione
+- Le differenze sono la compatibilità con cmake di ubuntu 14.04, per funzionare il sistema è necessario compilare una versione aggiornata di cmake, in particolare server una versione superiore a 3.5.X
 
+- Compilare cmake richiede:
+    - download del pacchetto tar contenente il codice
+    - ./configure nella cartella estratta
+    - sudo make install per compilare e installare la nuova versione di cmake
+    ```
+    wget https://github.com/Kitware/CMake/releases/download/v3.30.0-rc2/cmake-3.30.0-rc2.tar.gz
+    # untar the file
+    cd cmake-3.30.0* # la tua versione
+    ./configure
+    sudo make install 
+    ```
+
+- A questo punto è possibile procedere con la compilazione del mapper
+
+- Se ci dovessere essere problemi contatare [https://github.com/GiovanniRaseraF](https://github.com/GiovanniRaseraF)
